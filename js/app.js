@@ -11,6 +11,7 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
+    // Object Destructuring for geting rating
     const { count, rate } = product.rating;
     const div = document.createElement("div");
     div.classList.add("product");
@@ -33,9 +34,10 @@ let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   document.getElementById("total-Products").innerText = count;
+  // Bug Fixed to call Update Total
+  updateTotal();
 };
 
 const getInputValue = (id) => {
@@ -72,7 +74,6 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", (priceConverted * 0.4).toFixed(2));
   }
-  updateTotal();
 };
 
 //grandTotal update function
