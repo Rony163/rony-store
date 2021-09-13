@@ -1,8 +1,15 @@
+/* Common utilities */
 body {
   background-color: #cfe0e8!important; 
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+/* Header text style */
+.header-text{
+  font-family: "Sofia", sans-serif;
+  font-size: 40px;
+}
+/* Search box section */
 .search-field {
   background-color: #cfe0e8 !important; 
   border: none;
@@ -21,7 +28,7 @@ body {
   width: 281px;
   border-radius: 5px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 0px;
   border-right: none;
 }
 .search-button {
@@ -30,11 +37,10 @@ body {
   border-radius: 25px;
   margin-left: 20px;
 }
-
+/* Product details section */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -60,6 +66,7 @@ body {
   width: 150px;
   height: 150px;
 }
+/* cart section */
 .cart {
   width: 350px;
   color: white;
@@ -78,6 +85,7 @@ body {
 .btn-buy-now{
   background-color:lightseagreen !important; 
 }
+/* Media queary section*/
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;
@@ -85,7 +93,6 @@ body {
   }
   .cart {
     width: 300px;
-    /* border: 1px solid green; */
     padding: 10px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
